@@ -13,7 +13,23 @@
 		53E271F01E4C646800E3FFF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53E271EE1E4C646800E3FFF2 /* Main.storyboard */; };
 		53E271F21E4C646800E3FFF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53E271F11E4C646800E3FFF2 /* Assets.xcassets */; };
 		53E271F51E4C646800E3FFF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53E271F31E4C646800E3FFF2 /* LaunchScreen.storyboard */; };
+		53E2720C1E4D70B500E3FFF2 /* HZCacheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E2720B1E4D70B500E3FFF2 /* HZCacheTests.m */; };
+		53E272141E4D70ED00E3FFF2 /* MemoryCacheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E272131E4D70ED00E3FFF2 /* MemoryCacheTests.m */; };
+		53E272181E4D8C1200E3FFF2 /* 04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 53E272171E4D8C1200E3FFF2 /* 04.jpg */; };
+		53E2721A1E4D8CA900E3FFF2 /* DictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E272191E4D8CA900E3FFF2 /* DictionaryTests.m */; };
+		53E2721D1E4DA3BF00E3FFF2 /* HZMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E2721C1E4DA3BF00E3FFF2 /* HZMemoryCache.m */; };
+		53E272201E4DA3F400E3FFF2 /* HZSpinLock.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E2721F1E4DA3F400E3FFF2 /* HZSpinLock.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		53E2720E1E4D70B500E3FFF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 53E271DA1E4C646800E3FFF2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53E271E11E4C646800E3FFF2;
+			remoteInfo = HZCache;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		53E271E21E4C646800E3FFF2 /* HZCache.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HZCache.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,10 +42,27 @@
 		53E271F11E4C646800E3FFF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53E271F41E4C646800E3FFF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53E271F61E4C646800E3FFF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53E272091E4D70B500E3FFF2 /* HZCacheTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HZCacheTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		53E2720B1E4D70B500E3FFF2 /* HZCacheTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZCacheTests.m; sourceTree = "<group>"; };
+		53E2720D1E4D70B500E3FFF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53E272131E4D70ED00E3FFF2 /* MemoryCacheTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryCacheTests.m; sourceTree = "<group>"; };
+		53E272171E4D8C1200E3FFF2 /* 04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 04.jpg; sourceTree = "<group>"; };
+		53E272191E4D8CA900E3FFF2 /* DictionaryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionaryTests.m; sourceTree = "<group>"; };
+		53E2721B1E4DA3BF00E3FFF2 /* HZMemoryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZMemoryCache.h; sourceTree = "<group>"; };
+		53E2721C1E4DA3BF00E3FFF2 /* HZMemoryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZMemoryCache.m; sourceTree = "<group>"; };
+		53E2721E1E4DA3F400E3FFF2 /* HZSpinLock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZSpinLock.h; sourceTree = "<group>"; };
+		53E2721F1E4DA3F400E3FFF2 /* HZSpinLock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZSpinLock.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		53E271DF1E4C646800E3FFF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53E272061E4D70B500E3FFF2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				53E271E41E4C646800E3FFF2 /* HZCache */,
+				53E2720A1E4D70B500E3FFF2 /* HZCacheTests */,
 				53E271E31E4C646800E3FFF2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				53E271E21E4C646800E3FFF2 /* HZCache.app */,
+				53E272091E4D70B500E3FFF2 /* HZCacheTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,6 +101,8 @@
 				53E271F11E4C646800E3FFF2 /* Assets.xcassets */,
 				53E271F31E4C646800E3FFF2 /* LaunchScreen.storyboard */,
 				53E271F61E4C646800E3FFF2 /* Info.plist */,
+				53E272171E4D8C1200E3FFF2 /* 04.jpg */,
+				53E271FC1E4C648700E3FFF2 /* Cache */,
 				53E271E51E4C646800E3FFF2 /* Supporting Files */,
 			);
 			path = HZCache;
@@ -77,6 +114,28 @@
 				53E271E61E4C646800E3FFF2 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		53E271FC1E4C648700E3FFF2 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				53E2721B1E4DA3BF00E3FFF2 /* HZMemoryCache.h */,
+				53E2721C1E4DA3BF00E3FFF2 /* HZMemoryCache.m */,
+				53E2721E1E4DA3F400E3FFF2 /* HZSpinLock.h */,
+				53E2721F1E4DA3F400E3FFF2 /* HZSpinLock.m */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		53E2720A1E4D70B500E3FFF2 /* HZCacheTests */ = {
+			isa = PBXGroup;
+			children = (
+				53E2720B1E4D70B500E3FFF2 /* HZCacheTests.m */,
+				53E272131E4D70ED00E3FFF2 /* MemoryCacheTests.m */,
+				53E272191E4D8CA900E3FFF2 /* DictionaryTests.m */,
+				53E2720D1E4D70B500E3FFF2 /* Info.plist */,
+			);
+			path = HZCacheTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +158,24 @@
 			productReference = 53E271E21E4C646800E3FFF2 /* HZCache.app */;
 			productType = "com.apple.product-type.application";
 		};
+		53E272081E4D70B500E3FFF2 /* HZCacheTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53E272101E4D70B500E3FFF2 /* Build configuration list for PBXNativeTarget "HZCacheTests" */;
+			buildPhases = (
+				53E272051E4D70B500E3FFF2 /* Sources */,
+				53E272061E4D70B500E3FFF2 /* Frameworks */,
+				53E272071E4D70B500E3FFF2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				53E2720F1E4D70B500E3FFF2 /* PBXTargetDependency */,
+			);
+			name = HZCacheTests;
+			productName = HZCacheTests;
+			productReference = 53E272091E4D70B500E3FFF2 /* HZCacheTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -111,6 +188,11 @@
 					53E271E11E4C646800E3FFF2 = {
 						CreatedOnToolsVersion = 8.1;
 						ProvisioningStyle = Automatic;
+					};
+					53E272081E4D70B500E3FFF2 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 53E271E11E4C646800E3FFF2;
 					};
 				};
 			};
@@ -128,6 +210,7 @@
 			projectRoot = "";
 			targets = (
 				53E271E11E4C646800E3FFF2 /* HZCache */,
+				53E272081E4D70B500E3FFF2 /* HZCacheTests */,
 			);
 		};
 /* End PBXProject section */
@@ -138,8 +221,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				53E271F51E4C646800E3FFF2 /* LaunchScreen.storyboard in Resources */,
+				53E272181E4D8C1200E3FFF2 /* 04.jpg in Resources */,
 				53E271F21E4C646800E3FFF2 /* Assets.xcassets in Resources */,
 				53E271F01E4C646800E3FFF2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53E272071E4D70B500E3FFF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,13 +241,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53E2721D1E4DA3BF00E3FFF2 /* HZMemoryCache.m in Sources */,
+				53E272201E4DA3F400E3FFF2 /* HZSpinLock.m in Sources */,
 				53E271ED1E4C646800E3FFF2 /* ViewController.m in Sources */,
 				53E271EA1E4C646800E3FFF2 /* AppDelegate.m in Sources */,
 				53E271E71E4C646800E3FFF2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		53E272051E4D70B500E3FFF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53E2721A1E4D8CA900E3FFF2 /* DictionaryTests.m in Sources */,
+				53E2720C1E4D70B500E3FFF2 /* HZCacheTests.m in Sources */,
+				53E272141E4D70ED00E3FFF2 /* MemoryCacheTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		53E2720F1E4D70B500E3FFF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 53E271E11E4C646800E3FFF2 /* HZCache */;
+			targetProxy = 53E2720E1E4D70B500E3FFF2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		53E271EE1E4C646800E3FFF2 /* Main.storyboard */ = {
@@ -218,7 +329,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -260,7 +371,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -290,6 +401,30 @@
 			};
 			name = Release;
 		};
+		53E272111E4D70B500E3FFF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HZCacheTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = PA.haofang.huazai.HZCacheTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HZCache.app/HZCache";
+			};
+			name = Debug;
+		};
+		53E272121E4D70B500E3FFF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HZCacheTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = PA.haofang.huazai.HZCacheTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HZCache.app/HZCache";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -307,6 +442,14 @@
 			buildConfigurations = (
 				53E271FA1E4C646800E3FFF2 /* Debug */,
 				53E271FB1E4C646800E3FFF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		53E272101E4D70B500E3FFF2 /* Build configuration list for PBXNativeTarget "HZCacheTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53E272111E4D70B500E3FFF2 /* Debug */,
+				53E272121E4D70B500E3FFF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
