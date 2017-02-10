@@ -52,6 +52,7 @@
 		53E2721C1E4DA3BF00E3FFF2 /* HZMemoryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZMemoryCache.m; sourceTree = "<group>"; };
 		53E2721E1E4DA3F400E3FFF2 /* HZSpinLock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZSpinLock.h; sourceTree = "<group>"; };
 		53E2721F1E4DA3F400E3FFF2 /* HZSpinLock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZSpinLock.m; sourceTree = "<group>"; };
+		53E272231E4DC76400E3FFF2 /* 参考的文档和代码.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "参考的文档和代码.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +135,7 @@
 				53E272131E4D70ED00E3FFF2 /* MemoryCacheTests.m */,
 				53E272191E4D8CA900E3FFF2 /* DictionaryTests.m */,
 				53E2720D1E4D70B500E3FFF2 /* Info.plist */,
+				53E272231E4DC76400E3FFF2 /* 参考的文档和代码.h */,
 			);
 			path = HZCacheTests;
 			sourceTree = "<group>";
@@ -444,6 +446,7 @@
 				53E271FB1E4C646800E3FFF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		53E272101E4D70B500E3FFF2 /* Build configuration list for PBXNativeTarget "HZCacheTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +455,7 @@
 				53E272121E4D70B500E3FFF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
