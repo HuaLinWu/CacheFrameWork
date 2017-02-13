@@ -93,7 +93,7 @@
 }
 - (void)insertNodeAtHeader:(_HZNode *)node {
     
-    CFDictionarySetValue(_dic, (__bridge const void *)(node->key), (__bridge const void *)(node->value));
+    CFDictionarySetValue(_dic, (__bridge const void *)(node->key), (__bridge const void *)(node));
     _count++;
     _totalCost += node->cost;
     
@@ -162,9 +162,6 @@
 }
 @end
 
-
-
-
 @interface HZMemoryCache(){
     
     HZSpinLock *_spinLock;
@@ -181,16 +178,21 @@
         _cacheQueue = [[_HZMemoryCacheQueue alloc] init];
         self.countLimit = NSUIntegerMax;
         self.totalCostLimit = NSUIntegerMax;
+        self.shouldRemoveAllObjectsOnMemberWarning = YES;
+        self.shouldRemoveAllObjectsWhenEnteringBackground = NO;
         //添加监听内存警告
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didReceiveMemoryWarningNotification) name:UIApplicationDidReceiveMemoryWarningNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appDidEnterBackground) name:UIApplicationDidEnterBackgroundNotification object:nil];
     }
     return self;
 }
 - (void)dealloc{
     
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationDidReceiveMemoryWarningNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationDidEnterBackgroundNotification object:nil];
 }
 #pragma mark public
-- (nullable id)objectForKey:(id<NSCopying>)key {
+- (nullable id)objectForKey:(id)key {
     if(!key) {
         return nil;
     }
@@ -208,7 +210,7 @@
     return value;
 }
 
-- (void)setObject:(id)obj forKey:(id<NSCopying>)key {
+- (void)setObject:(id)obj forKey:(id)key {
     
     [self setObject:obj forKey:key withCost:0];
 }
@@ -250,7 +252,7 @@
     
 }
 
-- (void)removeObjectForKey:(id<NSCopying>)key {
+- (void)removeObjectForKey:(id)key {
     
     if(!key) return;
     [_spinLock lock];
@@ -274,7 +276,25 @@
 
 #pragma mark private
 - (void)didReceiveMemoryWarningNotification{
-
+    
+    if(self.shouldRemoveAllObjectsOnMemberWarning) {
+        
+        [self removeAllObjects];
+    }
+    if(self.onMemberWarningBlock) {
+        
+        self.onMemberWarningBlock(self);
+    }
 }
-
+- (void)appDidEnterBackground{
+    
+    if(self.shouldRemoveAllObjectsWhenEnteringBackground) {
+        
+        [self removeAllObjects];
+    }
+    if(self.enteringBackgroundBlock) {
+        
+        self.enteringBackgroundBlock(self);
+    }
+}
 @end

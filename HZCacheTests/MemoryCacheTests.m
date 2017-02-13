@@ -47,7 +47,7 @@
     
     UIImage *image = [UIImage imageNamed:@"04.jpg"];
     [self measureBlock:^{
-        [cache setObject:image forKey:@"image"];
+        [cache setObject:image forKey:image];
     }];
     
 }
