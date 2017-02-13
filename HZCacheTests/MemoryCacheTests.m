@@ -49,6 +49,7 @@
     [self measureBlock:^{
         [cache setObject:image forKey:image];
     }];
+   
     
 }
 - (void)testSetObjectOfMutableThreed {
