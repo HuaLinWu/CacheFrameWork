@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "HZDiskCache.h"
 @interface ViewController ()
 
 @end
@@ -16,6 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    HZDiskCache *diskCache = [[HZDiskCache alloc] init];
+    UIImage *image = [UIImage imageNamed:@"04.jpg"];
+    [diskCache setObject:image forKey:@"图片1"];
+    [diskCache objectForKey:@"图片1"];
 }
 
 

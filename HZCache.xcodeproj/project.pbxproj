@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5347758E1E529AE4007428BE /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 5347758D1E529AE4007428BE /* Person.m */; };
 		535AD5771E5160950052C433 /* HZCoreDataCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 535AD5761E5160950052C433 /* HZCoreDataCache.m */; };
 		535AD57A1E517DA60052C433 /* HZDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 535AD5791E517DA60052C433 /* HZDiskCache.m */; };
 		53E271E71E4C646800E3FFF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E271E61E4C646800E3FFF2 /* main.m */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5347758C1E529AE4007428BE /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		5347758D1E529AE4007428BE /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		535AD5751E5160950052C433 /* HZCoreDataCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZCoreDataCache.h; sourceTree = "<group>"; };
 		535AD5761E5160950052C433 /* HZCoreDataCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZCoreDataCache.m; sourceTree = "<group>"; };
 		535AD5781E517DA60052C433 /* HZDiskCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZDiskCache.h; sourceTree = "<group>"; };
@@ -105,6 +108,8 @@
 				53E271EB1E4C646800E3FFF2 /* ViewController.h */,
 				53E271EC1E4C646800E3FFF2 /* ViewController.m */,
 				53E271EE1E4C646800E3FFF2 /* Main.storyboard */,
+				5347758C1E529AE4007428BE /* Person.h */,
+				5347758D1E529AE4007428BE /* Person.m */,
 				53E271F11E4C646800E3FFF2 /* Assets.xcassets */,
 				53E271F31E4C646800E3FFF2 /* LaunchScreen.storyboard */,
 				53E271F61E4C646800E3FFF2 /* Info.plist */,
@@ -255,6 +260,7 @@
 			files = (
 				53E2721D1E4DA3BF00E3FFF2 /* HZMemoryCache.m in Sources */,
 				535AD5771E5160950052C433 /* HZCoreDataCache.m in Sources */,
+				5347758E1E529AE4007428BE /* Person.m in Sources */,
 				53E272201E4DA3F400E3FFF2 /* HZSpinLock.m in Sources */,
 				53E271ED1E4C646800E3FFF2 /* ViewController.m in Sources */,
 				535AD57A1E517DA60052C433 /* HZDiskCache.m in Sources */,

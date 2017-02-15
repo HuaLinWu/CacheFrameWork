@@ -10,15 +10,15 @@
 NS_ASSUME_NONNULL_BEGIN
 @interface HZDiskCache : NSObject
 
-@property (nonatomic, assign) NSString *name;
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy, readonly) NSString *filePath;
 
-- (nullable id)objectForKey:(id)key;
+- (instancetype)initWithFilePath:(NSString *)path;
 
-- (void)setObject:(id <NSCoding>)obj forKey:(id)key;
+- (void)setObject:(id<NSCoding>)obj forKey:(NSString *)key;
 
-- (void)removeObjectForKey:(id)key;
+- (id<NSCoding>)objectForKey:(NSString *)key;
 
-- (void)removeAllObjects;
-
+- (void)removeObjectForKey:(NSString *)key;
 @end
 NS_ASSUME_NONNULL_END

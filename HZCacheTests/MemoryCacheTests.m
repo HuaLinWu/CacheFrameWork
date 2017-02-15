@@ -8,9 +8,11 @@
 
 #import <XCTest/XCTest.h>
 #import "HZMemoryCache.h"
+#import "HZDiskCache.h"
 @interface MemoryCacheTests : XCTestCase
 {
     HZMemoryCache *cache;
+    HZDiskCache *diskCache;
 }
 @end
 
@@ -20,6 +22,7 @@
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
     cache = [[HZMemoryCache alloc] init];
+    diskCache = [[HZDiskCache alloc] init];
 }
 
 - (void)tearDown {
@@ -46,10 +49,15 @@
 - (void)testSetObjectSpendTime {
     
     UIImage *image = [UIImage imageNamed:@"04.jpg"];
+    
+  
+    
     [self measureBlock:^{
         [cache setObject:image forKey:image];
     }];
-   
+   //存入disk缓存
+    [diskCache setObject:image forKey:@"图片1"];
+    [diskCache objectForKey:@"图片1"];
     
 }
 - (void)testSetObjectOfMutableThreed {
