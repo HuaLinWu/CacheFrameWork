@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "HZDiskCache.h"
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *tagertImageView;
 
 @end
 
@@ -16,11 +17,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    HZDiskCache *diskCache = [[HZDiskCache alloc] init];
-    UIImage *image = [UIImage imageNamed:@"04.jpg"];
-    [diskCache setObject:image forKey:@"图片1"];
-    [diskCache objectForKey:@"图片1"];
 }
 
 
@@ -29,5 +25,18 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+#pragma mark archiver imag button
+- (IBAction)archiverButtonClick:(id)sender {
+    HZDiskCache *diskCache = [[HZDiskCache alloc] init];
+    UIImage *image = [UIImage imageNamed:@"04.jpg"];
+    [diskCache setObject:image forKey:@"image04"];
+    
+    
+}
+#pragma mark unArchiver image button
+- (IBAction)unArchiverButtonClick:(id)sender {
+    HZDiskCache *diskCache = [[HZDiskCache alloc] init];
+    UIImage *image = (UIImage *)[diskCache objectForKey:@"image04"];
+    self.tagertImageView.image = image;
+}
 @end

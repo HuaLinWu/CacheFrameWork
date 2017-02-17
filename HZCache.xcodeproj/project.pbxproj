@@ -18,7 +18,6 @@
 		53E271F51E4C646800E3FFF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53E271F31E4C646800E3FFF2 /* LaunchScreen.storyboard */; };
 		53E2720C1E4D70B500E3FFF2 /* HZCacheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E2720B1E4D70B500E3FFF2 /* HZCacheTests.m */; };
 		53E272141E4D70ED00E3FFF2 /* MemoryCacheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E272131E4D70ED00E3FFF2 /* MemoryCacheTests.m */; };
-		53E272181E4D8C1200E3FFF2 /* 04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 53E272171E4D8C1200E3FFF2 /* 04.jpg */; };
 		53E2721A1E4D8CA900E3FFF2 /* DictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E272191E4D8CA900E3FFF2 /* DictionaryTests.m */; };
 		53E2721D1E4DA3BF00E3FFF2 /* HZMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E2721C1E4DA3BF00E3FFF2 /* HZMemoryCache.m */; };
 		53E272201E4DA3F400E3FFF2 /* HZSpinLock.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E2721F1E4DA3F400E3FFF2 /* HZSpinLock.m */; };
@@ -55,7 +54,6 @@
 		53E2720B1E4D70B500E3FFF2 /* HZCacheTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZCacheTests.m; sourceTree = "<group>"; };
 		53E2720D1E4D70B500E3FFF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53E272131E4D70ED00E3FFF2 /* MemoryCacheTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryCacheTests.m; sourceTree = "<group>"; };
-		53E272171E4D8C1200E3FFF2 /* 04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 04.jpg; sourceTree = "<group>"; };
 		53E272191E4D8CA900E3FFF2 /* DictionaryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionaryTests.m; sourceTree = "<group>"; };
 		53E2721B1E4DA3BF00E3FFF2 /* HZMemoryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZMemoryCache.h; sourceTree = "<group>"; };
 		53E2721C1E4DA3BF00E3FFF2 /* HZMemoryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZMemoryCache.m; sourceTree = "<group>"; };
@@ -113,7 +111,6 @@
 				53E271F11E4C646800E3FFF2 /* Assets.xcassets */,
 				53E271F31E4C646800E3FFF2 /* LaunchScreen.storyboard */,
 				53E271F61E4C646800E3FFF2 /* Info.plist */,
-				53E272171E4D8C1200E3FFF2 /* 04.jpg */,
 				53E271FC1E4C648700E3FFF2 /* Cache */,
 				53E271E51E4C646800E3FFF2 /* Supporting Files */,
 			);
@@ -238,7 +235,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				53E271F51E4C646800E3FFF2 /* LaunchScreen.storyboard in Resources */,
-				53E272181E4D8C1200E3FFF2 /* 04.jpg in Resources */,
 				53E271F21E4C646800E3FFF2 /* Assets.xcassets in Resources */,
 				53E271F01E4C646800E3FFF2 /* Main.storyboard in Resources */,
 			);

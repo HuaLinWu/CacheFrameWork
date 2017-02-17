@@ -50,6 +50,7 @@
     }
     NSString *filePath = [self getFilePathForKey:key];
     if([self createFileAtPath:filePath]) {
+        
         if([NSKeyedArchiver archiveRootObject:obj toFile:filePath]) {
             NSLog(@"---保存数据成功到文件-->%@",filePath);
         } else {
@@ -69,7 +70,6 @@
     return value;
 }
 - (void)removeObjectForKey:(NSString *)key {
-
 }
 #pragma mark private
 - (BOOL)createFileAtPath:(NSString *)filePath {
