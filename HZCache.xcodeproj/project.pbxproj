@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5347758E1E529AE4007428BE /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 5347758D1E529AE4007428BE /* Person.m */; };
+		534775941E5A8B2B007428BE /* timg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 534775931E5A8B2B007428BE /* timg.jpeg */; };
 		535AD5771E5160950052C433 /* HZCoreDataCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 535AD5761E5160950052C433 /* HZCoreDataCache.m */; };
 		535AD57A1E517DA60052C433 /* HZDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 535AD5791E517DA60052C433 /* HZDiskCache.m */; };
 		53E271E71E4C646800E3FFF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 53E271E61E4C646800E3FFF2 /* main.m */; };
@@ -36,6 +37,7 @@
 /* Begin PBXFileReference section */
 		5347758C1E529AE4007428BE /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		5347758D1E529AE4007428BE /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		534775931E5A8B2B007428BE /* timg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpeg; sourceTree = "<group>"; };
 		535AD5751E5160950052C433 /* HZCoreDataCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZCoreDataCache.h; sourceTree = "<group>"; };
 		535AD5761E5160950052C433 /* HZCoreDataCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZCoreDataCache.m; sourceTree = "<group>"; };
 		535AD5781E517DA60052C433 /* HZDiskCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZDiskCache.h; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				53E271F11E4C646800E3FFF2 /* Assets.xcassets */,
 				53E271F31E4C646800E3FFF2 /* LaunchScreen.storyboard */,
 				53E271F61E4C646800E3FFF2 /* Info.plist */,
+				534775931E5A8B2B007428BE /* timg.jpeg */,
 				53E271FC1E4C648700E3FFF2 /* Cache */,
 				53E271E51E4C646800E3FFF2 /* Supporting Files */,
 			);
@@ -236,6 +239,7 @@
 			files = (
 				53E271F51E4C646800E3FFF2 /* LaunchScreen.storyboard in Resources */,
 				53E271F21E4C646800E3FFF2 /* Assets.xcassets in Resources */,
+				534775941E5A8B2B007428BE /* timg.jpeg in Resources */,
 				53E271F01E4C646800E3FFF2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

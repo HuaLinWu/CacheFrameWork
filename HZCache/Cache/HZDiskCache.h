@@ -11,7 +11,12 @@ NS_ASSUME_NONNULL_BEGIN
 @interface HZDiskCache : NSObject
 
 @property (nonatomic, copy) NSString *name;
+
+@property (nonatomic, assign)NSTimeInterval ageLimit;
+
 @property (nonatomic, copy, readonly) NSString *filePath;
+
+@property (nonatomic, assign) NSTimeInterval autoTrimInterval;
 
 - (instancetype)initWithFilePath:(NSString *)path;
 

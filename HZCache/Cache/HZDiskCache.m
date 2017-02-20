@@ -8,8 +8,11 @@
 
 #import "HZDiskCache.h"
 #include <CommonCrypto/CommonCrypto.h>
+#import <objc/runtime.h>
+#import <UIKit/UIKit.h>
 @interface HZDiskCache()
 @property(nonatomic, copy) NSString *filePath;
+
 @end
 
 @implementation HZDiskCache
@@ -20,8 +23,9 @@
     if(self) {
         NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
        NSString *path = [rootPath stringByAppendingPathComponent:@"hzCache"];
-       self.filePath = path;
+       _filePath = path;
         [self createDirectoryAtPath:path];
+        [self initIvar];
     }
     return self;
 }
@@ -36,6 +40,7 @@
         }
         self.filePath = path;
         [self createDirectoryAtPath:path];
+        [self initIvar];
     }
     return self;
 }
@@ -51,10 +56,10 @@
     NSString *filePath = [self getFilePathForKey:key];
     if([self createFileAtPath:filePath]) {
         
-        if([NSKeyedArchiver archiveRootObject:obj toFile:filePath]) {
+        id<NSCoding>tagertObject = [self machiningObject:obj];
+        if([NSKeyedArchiver archiveRootObject:tagertObject toFile:filePath]) {
             NSLog(@"---保存数据成功到文件-->%@",filePath);
         } else {
-            
             NSLog(@"----保存失败-->value = %@,key =%@",obj,key);
         }
     }
@@ -70,8 +75,34 @@
     return value;
 }
 - (void)removeObjectForKey:(NSString *)key {
+    NSString *filePath = [self getFilePathForKey:key];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if([fileManager fileExistsAtPath:filePath]) {
+        [fileManager removeItemAtPath:filePath error:nil];
+    }
 }
 #pragma mark private
+
+- (void)initIvar {
+    
+    //初始化缓存时间
+    _ageLimit = DBL_MAX;
+    _autoTrimInterval = 60;
+}
+
+- (id<NSCoding>)machiningObject:(id<NSCoding>)object {
+    Class objectClass = object_getClass(object);
+    id<NSCoding>machinedObject = object;
+    //当为图片的时候需要加工
+    if([objectClass isSubclassOfClass:NSClassFromString(@"UIImage")]) {
+        UIImage *tempImage = (UIImage *)object;
+        if(![tempImage.imageAsset isMemberOfClass:[UIImage class]]) {
+            machinedObject = [UIImage imageWithCGImage:tempImage.CGImage];
+        }
+    }
+    return machinedObject;
+}
+
 - (BOOL)createFileAtPath:(NSString *)filePath {
     
     if(!filePath || ![filePath isKindOfClass:[NSString class]] || filePath.length == 0){
@@ -109,6 +140,7 @@
     NSString *filePath = [self.filePath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.data",fileName]];
     return filePath;
 }
+
 - (NSString *)md5StringForData:(NSData *)data{
     
     unsigned char result[CC_MD5_DIGEST_LENGTH];

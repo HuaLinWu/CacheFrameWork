@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "HZDiskCache.h"
+#import "Person.h"
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *tagertImageView;
 
@@ -28,7 +29,7 @@
 #pragma mark archiver imag button
 - (IBAction)archiverButtonClick:(id)sender {
     HZDiskCache *diskCache = [[HZDiskCache alloc] init];
-    UIImage *image = [UIImage imageNamed:@"04.jpg"];
+    UIImage *image = [UIImage imageNamed:@"timg.jpeg"];
     [diskCache setObject:image forKey:@"image04"];
     
     
@@ -39,4 +40,10 @@
     UIImage *image = (UIImage *)[diskCache objectForKey:@"image04"];
     self.tagertImageView.image = image;
 }
+#pragma mark delete button_click
+- (IBAction)deleteButtonClick:(UIButton *)sender {
+     HZDiskCache *diskCache = [[HZDiskCache alloc] init];
+    [diskCache removeObjectForKey:@"image04"];
+}
+
 @end

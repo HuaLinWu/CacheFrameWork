@@ -9,5 +9,7 @@
 #import "Person.h"
 
 @implementation Person
-
+- (id)copyWithZone:(nullable NSZone *)zone {
+    return self;
+}
 @end
