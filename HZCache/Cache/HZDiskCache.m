@@ -12,7 +12,6 @@
 #import <UIKit/UIKit.h>
 @interface HZDiskCache()
 @property(nonatomic, copy) NSString *filePath;
-
 @end
 
 @implementation HZDiskCache
@@ -65,6 +64,26 @@
     }
     
 }
+- (void)setObject:(id)object customArchiveBlock:(NSData *(^)(id object))customArchiveBlock  forKey:(NSString *)key {
+    if(!key){
+        return;
+    }
+    if(!object){
+        [self removeObjectForKey:key];
+        return;
+    }
+    NSString *filePath = [self getFilePathForKey:key];
+    if([self createFileAtPath:filePath]) {
+        NSData *data = customArchiveBlock(object);
+        if(!data){
+            return;
+        } else {
+            [self writeData:data toFilePath:filePath];
+        }
+    }
+
+}
+
 - (id<NSCoding>)objectForKey:(NSString *)key {
     
     if(!key){
@@ -74,12 +93,32 @@
     id value = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
     return value;
 }
+- (id)objectWithCustomUnArchiveBlock:(id(^)(NSData* data))customUnArchiveBlock forKey:(NSString *)key {
+    
+    if(!key) {
+        return nil;
+    }
+    NSString *filePath = [self getFilePathForKey:key];
+    NSData *data = [self readFileDataForFilePath:filePath];
+    id object = customUnArchiveBlock(data);
+    
+    return object;
+}
+
 - (void)removeObjectForKey:(NSString *)key {
     NSString *filePath = [self getFilePathForKey:key];
     NSFileManager *fileManager = [NSFileManager defaultManager];
     if([fileManager fileExistsAtPath:filePath]) {
         [fileManager removeItemAtPath:filePath error:nil];
     }
+}
+- (BOOL)containsObjectForKey:(NSString *)key {
+    if(!key) {
+        return NO;
+    }
+    NSString *filePath =[self getFilePathForKey:key];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    return [fileManager fileExistsAtPath:filePath];
 }
 #pragma mark private
 
@@ -102,7 +141,31 @@
     }
     return machinedObject;
 }
-
+- (NSData *)readFileDataForFilePath:(NSString *)filePath {
+    
+    if(!filePath) {
+        return nil;
+    }
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if(![fileManager fileExistsAtPath:filePath]){
+        
+        return nil;
+        
+    } else {
+        return [NSData dataWithContentsOfFile:filePath];
+    }
+    return nil;
+}
+- (void)writeData:(NSData *)fileData toFilePath:(NSString *)filePath {
+    
+    if(!fileData || !filePath) {
+        return;
+    }
+    if([self createFileAtPath:filePath]) {
+        
+        [fileData writeToFile:filePath atomically:YES];
+    }
+}
 - (BOOL)createFileAtPath:(NSString *)filePath {
     
     if(!filePath || ![filePath isKindOfClass:[NSString class]] || filePath.length == 0){
